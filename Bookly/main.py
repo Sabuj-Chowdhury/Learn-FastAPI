@@ -9,3 +9,8 @@ async def read_root():
 @app.get('/greet/{name}')
 async def greet(name:str) -> dict:
     return{'message':f'hello {name}'}
+
+# query parameter
+@app.get('/greet2')
+async def greet(name:str)->dict:
+    return{"message":f"hello, {name}"}
